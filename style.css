@@ -1,6 +1,7 @@
 @import "components/banner.css";
 @import "components/navbar.css";
 @import "components/list-features.css";
+@import "components/text-container.css";
 
 * {
   margin: 0;
