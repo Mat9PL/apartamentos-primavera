@@ -1,1 +1,7 @@
 @import "components/banner.css";
+@import "components/navbar.css";
+@import "components/list-features.css";
+
+* {
+  margin: 0;
+}
