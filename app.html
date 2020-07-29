@@ -4,10 +4,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Apartamentos Primavera</title>
   <link rel="stylesheet" type="text/css" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Gayathri:wght@400;700&display=swap" rel="stylesheet">
+  
+  <!-- google fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+  
+  <!-- bootstrap -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  
+  <!-- font awesome -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css">
 
+  <!-- mapbox -->
+  <script src="https://api.mapbox.com/mapbox-gl-js/v1.11.1/mapbox-gl.js"></script>
+  <link href="https://api.mapbox.com/mapbox-gl-js/v1.11.1/mapbox-gl.css" rel="stylesheet" />
 </head>
 <body>
   <div class="navbar navbar-expand-sm navbar-dark bg-dark navbar-lewagon">
@@ -38,36 +47,76 @@
   
   <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(assets/IMG-20160920-WA0011.jpg);">
     <div class="container">
-      <h1>Apartamento Primavera</h1>
-      <p>Feel at Home When You're Away</p>
-      <a class="btn btn-flat" href="#">See more</a>
+      <div class="banner-text">
+        <h1>Apartamento Primavera</h1>
+        <p>Feel at Home When You're Away</p>
+      </div>
     </div>
   </div>
-  <div class="list-features">
-    <div class="list-features-item">
-      <i class="fas fa-wifi"></i>
-      <p>Free WiFi</p>
+
+  <div class="container">
+
+    <div class="list-features">
+      <div class="list-features-item">
+        <i class="fas fa-wifi"></i>
+        <p>Free WiFi</p>
+      </div>
+      <div class="list-features-item">
+        <i class="fas fa-couch"></i>
+        <p>Totalmente Amueblado</p>
+      </div>
+      <div class="list-features-item">
+        <i class="fas fa-car"></i>
+        <p>Aparcamiento Gratuito</p>
+      </div>
+      <div class="list-features-item">
+        <i class="fas fa-plane"></i>
+        <p>Aeropuerto</p>
+      </div>
     </div>
-    <div class="list-features-item">
-      <i class="fas fa-couch"></i>
-      <p>Totalmente Amueblado</p>
-    </div>
-    <div class="list-features-item">
-      <i class="fas fa-car"></i>
-      <p>Aparcamiento Gratuito</p>
-    </div>
-    <div class="list-features-item">
-      <i class="fas fa-plane"></i>
-      <p>Aeropuerto</p>
-    </div>
-  </div>
-  <div class="text-container">
-    <div class="container">
+    <div class="text-container">
       <p>
-      Bonito apartamento de un dormitorio  en un complejo muy tranquilo. El apartamento está equipado con todo lo necesario para una estancia agradable y cómoda - cocina totalmente equipada (nevera, cocina eléctrica, microondas y utensilios de cocina), lavadora, plancha, ropa de cama, toallas, WiFi (fibra) y Smart TV. Con buen clima todo el año, se trata de un lugar perfecto para aquellos que busquen un lugar silencioso y relajante para vacaciones tanto de corta como de larga duración.
+        Bonito apartamento de un dormitorio  en un complejo muy tranquilo. El apartamento está equipado con todo lo necesario para una estancia agradable y cómoda - cocina totalmente equipada (nevera, cocina eléctrica, microondas y utensilios de cocina), lavadora, plancha, ropa de cama, toallas, WiFi (fibra) y Smart TV. Con buen clima todo el año, se trata de un lugar perfecto para aquellos que busquen un lugar silencioso y relajante para vacaciones tanto de corta como de larga duración.
       </p>
     </div>
+    <div class="grid-elements">
+      <div class="list-info">
+        <h2>Why book with us</h2>
+        <ul>
+          <li>
+            500m to Union Square
+          </li>
+          <li>
+            300m to Bart Station
+          </li>
+          <li>
+            5 minutes walking to Muni
+          </li>
+          <li>
+            Private parking in the same building
+          </li>
+          <li>
+            Solarium and terrace on the roof
+          </li>
+        </ul>
+      </div>
+  
+      <div id="map"></div>
+    </div>
+
+
+    <script>
+      mapboxgl.accessToken = 'pk.eyJ1IjoibWF0ZXVzemJyemV6YW5za2kiLCJhIjoiY2s5eTIwdjBoMG9ydDNscXNlOGowcWs4ZSJ9.Z8wdW9Vw4hRxZotSgfSZMw';
+    var map = new mapboxgl.Map({
+    container: 'map', // container id
+    style: 'mapbox://styles/mapbox/streets-v11', // stylesheet location
+    center: [-74.5, 40], // starting position [lng, lat]
+    zoom: 9 // starting zoom
+    });
+    </script>
+
   </div>
+
   <div id="paypal-button-container"></div>
   <script src="https://www.paypal.com/sdk/js?client-id=sb&currency=EUR" data-sdk-integration-source="button-factory"></script>
   <script>

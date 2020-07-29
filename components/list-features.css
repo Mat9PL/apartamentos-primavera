@@ -1,12 +1,10 @@
 .list-features {
-  display: flex;
-  width: 100vw;
-  height: 200px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 40px 10px;
   color:blanchedalmond;
-  background-color: rgb(52, 58, 64);
-  align-items: center;
-  justify-content: space-evenly;
-  padding: 0 10%;
+  background-color: rgba(0, 0, 0, 0.5);
+
 }
 
 .list-features-item {
@@ -16,10 +14,22 @@
 }
 
 .list-features-item i {
-  font-size: 60px;
+  font-size: 30px;
 }
 
 .list-features-item p {
-  font-family: 'Gayathri', sans-serif;
   margin-top: 20px;
+  text-align: center;
+}
+
+@media (min-width: 480px) {
+  .list-features-item i {
+    font-size: 60px;
+  }
+}
+
+@media (min-width: 760px) {
+  .list-features {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
 }

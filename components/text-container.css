@@ -1,8 +1,6 @@
 .text-container {
   color:blanchedalmond;
-  background-color: rgb(52, 58, 64);
-  font-family: 'Gayathri', sans-serif;
-  width: 100vw;
-  font-size: 32px;
+  font-size: 24px;
   text-align: center;
+  background-color: rgba(0, 0, 0, 0.5);
 }

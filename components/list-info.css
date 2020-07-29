@@ -1,0 +1,15 @@
+.list-info {
+  width: 50%;
+  height: 350px;
+  color: blanchedalmond;
+  padding: 20px;
+}
+
+.list-info ul {
+  padding: 0;
+  list-style: none;
+}
+
+.list-info li {
+  padding: 0;
+}
